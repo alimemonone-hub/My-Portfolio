@@ -43,3 +43,11 @@ const observer = new IntersectionObserver((entries) => {
 
 statNums.forEach(el => observer.observe(el));
 skillFills.forEach(el => observer.observe(el));
+const chatBubble = document.getElementById('chatBubble');
+const bubbleClose = document.getElementById('bubbleClose');
+
+setTimeout(() => chatBubble.classList.add('show'), 3000);
+bubbleClose.addEventListener('click', (e) => {
+  e.preventDefault();
+  chatBubble.classList.remove('show');
+});
